@@ -1,0 +1,192 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* Background glow effect */
+.hero-background-glow {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(42, 157, 143, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-8) 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: var(--font-size-6xl);
+    font-weight: var(--font-weight-extrabold);
+    line-height: 1.1;
+    margin-bottom: var(--space-4);
+    color: white;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-xl);
+    color: #CBD5E1;
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-6);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-10);
+}
+
+.hero-btn-primary {
+    background: linear-gradient(135deg, #2A9D8F 0%, #3DBAA6 100%);
+    box-shadow: 0 8px 24px rgba(42, 157, 143, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.hero-btn-primary:hover {
+    background: linear-gradient(135deg, #239286 0%, #36a899 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(42, 157, 143, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #2A9D8F;
+    border: 2px solid #2A9D8F;
+}
+
+.btn-secondary:hover {
+    background: rgba(42, 157, 143, 0.1);
+    color: #3DBAA6;
+    border-color: #3DBAA6;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-10);
+    padding: var(--space-6);
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(16px);
+    border-radius: var(--radius-2xl);
+    border: 1px solid rgba(42, 157, 143, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    background: linear-gradient(135deg, #2A9D8F 0%, #3DBAA6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-1);
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: #CBD5E1;
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: var(--space-8);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.scroll-indicator-mouse {
+    width: 24px;
+    height: 40px;
+    border: 2px solid #2A9D8F;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.scroll-indicator-dot {
+    width: 4px;
+    height: 8px;
+    background: #2A9D8F;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: var(--space-8);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
+        padding: var(--space-4);
+    }
+
+    .stat-value {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
