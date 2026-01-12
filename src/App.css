@@ -36,10 +36,10 @@ section {
 }
 
 .loading-logo-image {
-    width: 250px;
+    width: 400px;
     height: auto;
-    filter: brightness(1.4) drop-shadow(0 8px 32px rgba(238, 232, 232, 0.938)) drop-shadow(0 0 16px rgba(241, 226, 226, 0.918));
-    animation: pulse 2s ease-in-out infinite;
+    filter: brightness(1.4) drop-shadow(0 8px 99px rgba(238, 232, 232, 0.938)) drop-shadow(0 0 99px rgba(241, 226, 226, 0.918));
+    animation: pulse 2.4s ease-in-out infinite;
 }
 
 @keyframes pulse {

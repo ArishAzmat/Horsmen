@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Header.css';
-import horsmenLogo from '../assets/images/horsmen-logo.png';
+import horsmenLogo from '../assets/images/logo.png';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -33,6 +33,7 @@ const Header = () => {
             <div className="container">
                 <nav className="nav">
                     <div className="nav-logo" onClick={() => scrollToSection('hero')}>
+                        <img src={horsmenLogo} alt="Horsmen" className="header-logo-image" />
                         <span className="logo-text">
                             <span className="logo-text-primary">Hors</span>
                             <span className="logo-text-accent">men</span>

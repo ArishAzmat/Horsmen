@@ -117,6 +117,13 @@
     background: #2A9D8F;
 }
 
+.header-logo-image {
+    width: 80px;
+    height: auto;
+    filter: brightness(3.4) drop-shadow(0 8px 999px rgba(238, 232, 232, 0.938)) drop-shadow(0 0 999px rgba(241, 226, 226, 0.918));
+    /* animation: pulse 2s ease-in-out infinite; */
+}
+
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: flex;

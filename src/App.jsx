@@ -7,7 +7,7 @@ import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import horsmenLogo from './assets/images/horsmen-logo.png';
+import horsmenLogo from './assets/images/logo.png';
 import './App.css';
 
 function App() {
