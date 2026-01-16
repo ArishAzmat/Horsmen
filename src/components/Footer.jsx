@@ -1,5 +1,7 @@
 import React from 'react';
+import { Linkedin } from 'lucide-react';
 import './Footer.css';
+import horsmenLogo from '../assets/images/logo.png';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -17,8 +19,8 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-section">
                         <div className="footer-logo">
-                            <img src="/logo.png" alt="Horsmen Logo" className="footer-logo-image" />
-                            <span className="footer-logo-text">Horsmen</span>
+                            <img src={horsmenLogo} alt="Horsmen Logo" className="footer-logo-image" />
+                            <span className="footer-logo-text">Horsmen Consulting</span>
                         </div>
                         <p className="footer-description">
                             Bridging Technology and Legal Excellence. Empowering businesses to thrive in the digital age.
@@ -52,11 +54,23 @@ const Footer = () => {
                             <li>📞 +1 (555) 123-4567</li>
                             <li>📍 123 Business Avenue<br />Tech District, CA 94000</li>
                         </ul>
+                        <div className="footer-social" style={{ marginTop: '1rem' }}>
+                            <a
+                                href="https://www.linkedin.com/company/horsmenconsulting/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: 'var(--color-text-light)', transition: 'color 0.3s' }}
+                                onMouseOver={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
+                                onMouseOut={(e) => e.currentTarget.style.color = 'var(--color-text-light)'}
+                            >
+                                <Linkedin size={24} />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {currentYear} Horsmen. All rights reserved.</p>
+                    <p>&copy; {currentYear} Horsmen Consulting. All rights reserved.</p>
                     <div className="footer-legal">
                         <a href="#">Privacy Policy</a>
                         <span>•</span>

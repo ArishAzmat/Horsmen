@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import TargetAudience from './components/TargetAudience';
 import Services from './components/Services';
+import Process from './components/Process';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -57,7 +59,9 @@ function App() {
                 <Header />
                 <main>
                     <Hero />
+                    <TargetAudience />
                     <Services />
+                    <Process />
                     <About />
                     <Testimonials />
                     <Contact />

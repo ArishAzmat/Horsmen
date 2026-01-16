@@ -22,27 +22,27 @@ export const servicesData = [
         icon: "Cloud",
         features: ["Cloud Migration", "AWS/Azure Services", "Cloud Architecture", "DevOps Integration"]
     },
-    {
-        id: 4,
-        title: "Data Privacy & Security",
-        description: "Comprehensive data protection strategies and compliance solutions to safeguard sensitive business information.",
-        icon: "Shield",
-        features: ["GDPR Compliance", "Security Audits", "Risk Assessment", "Privacy Policies"]
-    },
-    {
-        id: 5,
-        title: "Managed IT Services",
-        description: "Proactive monitoring and maintenance of your IT infrastructure to ensure optimal performance and minimize downtime.",
-        icon: "Server",
-        features: ["24/7 Monitoring", "System Maintenance", "Backup Solutions", "Performance Tuning"]
-    },
-    {
-        id: 6,
-        title: "Cybersecurity",
-        description: "Advanced security solutions to protect your business from evolving cyber threats and ensure data integrity.",
-        icon: "Lock",
-        features: ["Threat Detection", "Penetration Testing", "Security Training", "Incident Response"]
-    },
+    // {
+    //     id: 4,
+    //     title: "Data Privacy & Security",
+    //     description: "Comprehensive data protection strategies and compliance solutions to safeguard sensitive business information.",
+    //     icon: "Shield",
+    //     features: ["GDPR Compliance", "Security Audits", "Risk Assessment", "Privacy Policies"]
+    // },
+    // {
+    //     id: 5,
+    //     title: "Managed IT Services",
+    //     description: "Proactive monitoring and maintenance of your IT infrastructure to ensure optimal performance and minimize downtime.",
+    //     icon: "Server",
+    //     features: ["24/7 Monitoring", "System Maintenance", "Backup Solutions", "Performance Tuning", "Optimization"]
+    // },
+    // {
+    //     id: 6,
+    //     title: "Cybersecurity",
+    //     description: "Advanced security solutions to protect your business from evolving cyber threats and ensure data integrity.",
+    //     icon: "Lock",
+    //     features: ["Threat Detection", "Penetration Testing", "Security Training", "Incident Response"]
+    // },
     {
         id: 7,
         title: "Infrastructure Management",
@@ -117,7 +117,7 @@ export const testimonialsData = [
 ];
 
 export const companyInfo = {
-    name: "Horsmen",
+    name: "Horsmen Consulting",
     tagline: "Bridging Technology and Legal Excellence",
     description: "We are a premier IT and legal consulting firm specializing in delivering comprehensive solutions that combine cutting-edge technology with legal expertise. Our mission is to empower businesses to navigate the complex intersection of technology and compliance.",
     mission: "To provide innovative, compliant, and scalable solutions that drive business growth while ensuring legal and regulatory excellence.",
@@ -150,7 +150,7 @@ export const companyInfo = {
         phone: "+1 (555) 123-4567",
         address: "123 Business Avenue, Tech District, CA 94000",
         social: {
-            linkedin: "https://linkedin.com/company/horsmen",
+            linkedin: "https://www.linkedin.com/company/horsmenconsulting/",
             twitter: "https://twitter.com/horsmen",
             facebook: "https://facebook.com/horsmen"
         }

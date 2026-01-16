@@ -6,20 +6,112 @@
     justify-content: center;
     padding-top: 80px;
     overflow: hidden;
-    background: transparent;
+    /* Deep techno background */
+    background-color: #0f172a;
+    background-image:
+        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
 }
 
-/* Background glow effect */
-.hero-background-glow {
+/* Technical Grid Overlay */
+.hero::before {
+    content: "";
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 800px;
-    height: 800px;
-    background: radial-gradient(circle, rgba(42, 157, 143, 0.15) 0%, transparent 70%);
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image:
+        linear-gradient(rgba(42, 157, 143, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(42, 157, 143, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg);
+    animation: grid-move 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes grid-move {
+    0% {
+        transform: perspective(500px) rotateX(60deg) translateY(0);
+    }
+
+    100% {
+        transform: perspective(500px) rotateX(60deg) translateY(50px);
+    }
+}
+
+/* Background glow effects - Upgraded */
+.hero-glow {
+    position: absolute;
+    border-radius: 50%;
     filter: blur(80px);
     z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.hero-glow-1 {
+    top: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(42, 157, 143, 0.3) 0%, transparent 70%);
+    /* Teal */
+    animation: float-slow 18s infinite alternate ease-in-out;
+}
+
+.hero-glow-2 {
+    bottom: -10%;
+    left: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(28, 61, 90, 0.4) 0%, transparent 70%);
+    /* Navy */
+    animation: float-slower 22s infinite alternate-reverse ease-in-out;
+}
+
+.hero-glow-3 {
+    top: 40%;
+    left: 30%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(61, 186, 166, 0.2) 0%, transparent 70%);
+    /* Lighter Teal */
+    animation: pulse-glow 8s infinite alternate ease-in-out;
+}
+
+@keyframes float-slow {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(-30px, 50px) scale(1.1);
+    }
+}
+
+@keyframes float-slower {
+    0% {
+        transform: translate(0, 0) scale(1.0);
+    }
+
+    100% {
+        transform: translate(50px, -30px) scale(1.1);
+    }
+}
+
+@keyframes pulse-glow {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: scale(1.2);
+    }
 }
 
 .hero-content {

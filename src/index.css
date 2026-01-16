@@ -19,19 +19,19 @@
   /* Logo Teal - Innovation & Growth */
   --color-accent: #3DBAA6;
   /* Lighter Teal - Accent */
-  --color-background: #FFFFFF;
-  /* Pure White */
-  --color-surface: #F8FAFC;
-  /* Light Gray Surface */
-  --color-surface-dark: #152D42;
-  /* Darker Navy Surface */
-  --color-text-primary: #0F172A;
-  /* Almost Black */
-  --color-text-secondary: #64748B;
-  /* Medium Gray */
+  --color-background: #0f172a;
+  /* Deep Blue */
+  --color-surface: #1e293b;
+  /* Slate Surface */
+  --color-surface-dark: #020617;
+  /* Darker Surface */
+  --color-text-primary: #F8FAFC;
+  /* Slate 50 */
+  --color-text-secondary: #CBD5E1;
+  /* Slate 300 */
   --color-text-light: #94A3B8;
-  /* Light Gray */
-  --color-border: #E2E8F0;
+  /* Slate 400 */
+  --color-border: rgba(255, 255, 255, 0.1);
   /* Subtle Border */
   --color-success: #10B981;
   /* Green */
@@ -39,9 +39,11 @@
   /* Red */
 
   /* GRADIENTS - Using Logo Colors */
-  --gradient-primary: linear-gradient(135deg, #1C3D5A 0%, #2A9D8F 100%);
-  --gradient-dark: linear-gradient(135deg, #1C3D5A 0%, #152D42 100%);
-  --gradient-overlay: linear-gradient(180deg, rgba(28, 61, 90, 0.8) 0%, rgba(28, 61, 90, 0.95) 100%);
+  --gradient-primary: linear-gradient(135deg, #2A9D8F 0%, #3DBAA6 100%);
+  --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --gradient-glow: radial-gradient(circle at top right, rgba(42, 157, 143, 0.15), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(28, 61, 90, 0.15), transparent 40%);
+  --gradient-overlay: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
 
   /* TYPOGRAPHY */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -147,7 +149,9 @@ body {
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
   color: #E2E8F0;
-  background: linear-gradient(to bottom, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  background: #0f172a;
+  background-image: var(--gradient-glow), linear-gradient(to bottom, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  background-attachment: fixed;
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -161,7 +165,7 @@ h5,
 h6 {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--color-primary);
+  color: var(--color-text-primary);
   margin-bottom: var(--space-2);
 }
 
@@ -226,8 +230,8 @@ a:hover {
 }
 
 .section-dark {
-  background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
-  color: var(--color-surface);
+  background: linear-gradient(to bottom, #0f172a 0%, #111827 100%);
+  color: var(--color-text-primary);
 }
 
 .section-dark h1,
@@ -236,7 +240,7 @@ a:hover {
 .section-dark h4,
 .section-dark h5,
 .section-dark h6 {
-  color: var(--color-surface);
+  color: var(--color-text-primary);
 }
 
 .section-dark p {

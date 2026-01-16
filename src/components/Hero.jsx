@@ -20,8 +20,10 @@ const Hero = () => {
 
     return (
         <section id="hero" className="hero">
-            {/* Background with glow effect */}
-            <div className="hero-background-glow"></div>
+            {/* Background with glow effects */}
+            <div className="hero-glow hero-glow-1"></div>
+            <div className="hero-glow hero-glow-2"></div>
+            <div className="hero-glow hero-glow-3"></div>
 
             <div className="container">
                 <div className="hero-content">
@@ -31,8 +33,8 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                         <h1 className="hero-title">
-                            Bridging Technology and{' '}
-                            <span className="text-gradient">Legal Excellence</span>
+                            Privacy-First Software Engineering for{' '}
+                            <span className="text-gradient">Global SaaS Companies</span>
                         </h1>
                     </motion.div>
 
@@ -42,9 +44,7 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="hero-subtitle"
                     >
-                        Premier IT and legal consulting firm delivering innovative solutions
-                        at the intersection of technology and compliance. Empowering businesses
-                        to thrive in the digital age.
+                        Engineering + GDPR + security by design. We build secure, compliant, and scalable software for Fintech, Healthtech, and AI startups.
                     </motion.p>
 
                     <motion.div
@@ -57,7 +57,7 @@ const Hero = () => {
                             onClick={scrollToContact}
                             className="btn btn-primary btn-large hero-btn-primary"
                         >
-                            Schedule Consultation
+                            Book a Free Consultation
                             <ArrowRight size={20} />
                         </button>
                         <button
@@ -68,14 +68,14 @@ const Hero = () => {
                         </button>
                     </motion.div>
 
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="hero-stats"
                     >
                         <div className="stat-item">
-                            <div className="stat-value">15+</div>
+                            <div className="stat-value">6+</div>
                             <div className="stat-label">Years Experience</div>
                         </div>
                         <div className="stat-item">
@@ -90,7 +90,7 @@ const Hero = () => {
                             <div className="stat-value">50+</div>
                             <div className="stat-label">Team Members</div>
                         </div>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </div>
 

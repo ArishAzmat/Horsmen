@@ -51,10 +51,10 @@ const Contact = () => {
                     className="section-header text-center"
                 >
                     <h2 className="section-title">
-                        Get In <span className="text-gradient">Touch</span>
+                        Stop Worrying About <span className="text-gradient">Technical Debt</span>
                     </h2>
                     <p className="section-subtitle">
-                        Ready to transform your business? Let's start a conversation.
+                        Let's build software that scales securely.
                     </p>
                 </motion.div>
 
@@ -114,7 +114,7 @@ const Contact = () => {
                         >
                             <h3>Follow Us</h3>
                             <div className="social-icons">
-                                <a href="#" className="social-icon" aria-label="LinkedIn">
+                                <a href="https://www.linkedin.com/company/horsmenconsulting/" target="_blank" className="social-icon" aria-label="LinkedIn">
                                     <Linkedin size={20} />
                                 </a>
                                 <a href="#" className="social-icon" aria-label="Twitter">
@@ -190,7 +190,7 @@ const Contact = () => {
                             className="btn btn-primary btn-large"
                             disabled={isSubmitting}
                         >
-                            {isSubmitting ? 'Sending...' : 'Send Message'}
+                            {isSubmitting ? 'Sending...' : 'Schedule Discovery Call'}
                         </button>
                     </form>
                 </div>

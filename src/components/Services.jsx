@@ -1,58 +1,60 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-    Lightbulb,
-    Code,
-    Cloud,
-    Shield,
-    Server,
-    Lock,
-    Network,
-    Headphones
+    Rocket,
+    ShieldCheck,
+    Search,
+    Users
 } from 'lucide-react';
-import mockApi from '../api/mockApi';
 import './Services.css';
 
-// Icon mapping
-const iconMap = {
-    'Lightbulb': Lightbulb,
-    'Code': Code,
-    'Cloud': Cloud,
-    'Shield': Shield,
-    'Server': Server,
-    'Lock': Lock,
-    'Network': Network,
-    'Headphones': Headphones
-};
-
 const Services = () => {
-    const [services, setServices] = React.useState([]);
-    const [loading, setLoading] = React.useState(true);
-
-    React.useEffect(() => {
-        const fetchServices = async () => {
-            try {
-                const response = await mockApi.getServices();
-                setServices(response.data);
-                setLoading(false);
-            } catch (error) {
-                console.error('Error fetching services:', error);
-                setLoading(false);
-            }
-        };
-
-        fetchServices();
-    }, []);
-
-    if (loading) {
-        return (
-            <section id="services" className="section">
-                <div className="container">
-                    <div className="loading">Loading services...</div>
-                </div>
-            </section>
-        );
-    }
+    const services = [
+        {
+            id: 1,
+            title: "Secure MVP Development",
+            description: "Go from concept to compliant code in weeks. We build scalable frontends and secure backends designed for audit readiness.",
+            icon: Rocket,
+            features: [
+                "Rapid prototyping",
+                "Audit-ready architecture",
+                "Frontend & Backend scaling"
+            ]
+        },
+        {
+            id: 2,
+            title: "Compliance-Ready Architecture",
+            description: "Refactoring and system design that integrates GDPR/CCPA requirements directly into your codebase. Stop bolting on privacy later.",
+            icon: ShieldCheck,
+            features: [
+                "GDPR/CCPA compliance",
+                "Privacy by design",
+                "Security audits"
+            ]
+        },
+        {
+            id: 3,
+            title: "Technical Due Diligence",
+            description: "Code quality assessments, security vulnerability scans, and privacy gap analysis for startups preparing for funding or acquisition.",
+            icon: Search,
+            features: [
+                "Code quality assessment",
+                "Vulnerability scanning",
+                "Privacy gap analysis"
+            ]
+        },
+        {
+            id: 4,
+            title: "Dedicated Engineering Teams",
+            description: "Senior-led squads with in-house legal oversight. We act as your fractional engineering arm, fully integrated with your workflow.",
+            icon: Users,
+            features: [
+                "Senior leadership",
+                "Legal oversight",
+                "Fractional engineering"
+            ]
+        }
+    ];
 
     const container = {
         hidden: { opacity: 0 },
@@ -80,10 +82,10 @@ const Services = () => {
                     className="section-header text-center"
                 >
                     <h2 className="section-title">
-                        Our <span className="text-gradient">Services</span>
+                        What We <span className="text-gradient">Do</span>
                     </h2>
                     <p className="section-subtitle">
-                        Comprehensive IT and legal consulting solutions tailored to your business needs
+                        Engineering + Compliance. No Fluff.
                     </p>
                 </motion.div>
 
@@ -94,8 +96,8 @@ const Services = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     className="services-grid"
                 >
-                    {services.map((service, index) => {
-                        const IconComponent = iconMap[service.icon];
+                    {services.map((service) => {
+                        const IconComponent = service.icon;
                         return (
                             <motion.div
                                 key={service.id}
@@ -107,7 +109,7 @@ const Services = () => {
                                     <div className="service-card-glow"></div>
 
                                     <div className="service-icon-wrapper">
-                                        {IconComponent && <IconComponent className="service-icon-lucide" size={28} />}
+                                        <IconComponent className="service-icon-lucide" size={28} />
                                     </div>
 
                                     <h3 className="service-title">{service.title}</h3>

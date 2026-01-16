@@ -35,8 +35,8 @@ const Header = () => {
                     <div className="nav-logo" onClick={() => scrollToSection('hero')}>
                         <img src={horsmenLogo} alt="Horsmen" className="header-logo-image" />
                         <span className="logo-text">
-                            <span className="logo-text-primary">Hors</span>
-                            <span className="logo-text-accent">men</span>
+                            <span className="logo-text-primary">Horsmen</span>
+                            <span className="logo-text-accent" style={{ marginLeft: '4px', opacity: 0.9 }}>Consulting</span>
                         </span>
                     </div>
 
