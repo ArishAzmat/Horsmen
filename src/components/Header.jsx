@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import horsmenLogo from '../assets/images/logo.png';
 
@@ -32,13 +33,13 @@ const Header = () => {
         >
             <div className="container">
                 <nav className="nav">
-                    <div className="nav-logo" onClick={() => scrollToSection('hero')}>
+                    <Link to="/" className="nav-logo">
                         <img src={horsmenLogo} alt="Horsmen" className="header-logo-image" />
                         <span className="logo-text">
                             <span className="logo-text-primary">Horsmen</span>
                             <span className="logo-text-accent" style={{ marginLeft: '4px', opacity: 0.9 }}>Consulting</span>
                         </span>
-                    </div>
+                    </Link>
 
                     <button
                         className="mobile-menu-toggle"

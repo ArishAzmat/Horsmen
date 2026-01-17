@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import TargetAudience from './components/TargetAudience';
-import Services from './components/Services';
-import Process from './components/Process';
-import About from './components/About';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+import Home from './components/Home';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import Footer from './components/Footer';
 import horsmenLogo from './assets/images/logo.png';
 import './App.css';
@@ -25,11 +21,12 @@ function App() {
     }, []);
 
     return (
-        <>
-            <AnimatePresence>
+        <Router>
+            <AnimatePresence mode="wait">
                 {loading && (
                     <motion.div
                         className="loading-screen"
+                        key="loading"
                         initial={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
@@ -55,20 +52,19 @@ function App() {
                 )}
             </AnimatePresence>
 
-            <div className="App">
-                <Header />
-                <main>
-                    <Hero />
-                    <TargetAudience />
-                    <Services />
-                    <Process />
-                    <About />
-                    <Testimonials />
-                    <Contact />
-                </main>
-                <Footer />
-            </div>
-        </>
+            {!loading && (
+                <div className="App">
+                    <Header />
+                    <main>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                        </Routes>
+                    </main>
+                    <Footer />
+                </div>
+            )}
+        </Router>
     );
 }
 

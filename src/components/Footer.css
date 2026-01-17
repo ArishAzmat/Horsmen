@@ -21,6 +21,12 @@
     font-weight: var(--font-weight-semibold);
 }
 
+.footer-logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
 .footer-logo {
     display: flex;
     align-items: center;

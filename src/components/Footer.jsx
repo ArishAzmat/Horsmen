@@ -1,5 +1,6 @@
 import React from 'react';
 import { Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import horsmenLogo from '../assets/images/logo.png';
 
@@ -18,10 +19,12 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-content">
                     <div className="footer-section">
-                        <div className="footer-logo">
-                            <img src={horsmenLogo} alt="Horsmen Logo" className="footer-logo-image" />
-                            <span className="footer-logo-text">Horsmen Consulting</span>
-                        </div>
+                        <Link to="/" className="footer-logo-link">
+                            <div className="footer-logo">
+                                <img src={horsmenLogo} alt="Horsmen Logo" className="footer-logo-image" />
+                                <span className="footer-logo-text">Horsmen Consulting</span>
+                            </div>
+                        </Link>
                         <p className="footer-description">
                             Bridging Technology and Legal Excellence. Empowering businesses to thrive in the digital age.
                         </p>
@@ -72,7 +75,7 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>&copy; {currentYear} Horsmen Consulting. All rights reserved.</p>
                     <div className="footer-legal">
-                        <a href="#">Privacy Policy</a>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
                         <span>•</span>
                         <a href="#">Terms of Service</a>
                         <span>•</span>
