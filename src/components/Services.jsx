@@ -3,56 +3,76 @@ import { motion } from 'framer-motion';
 import {
     Rocket,
     ShieldCheck,
+    Layers,
+    Code,
     Search,
-    Users
+    Users,
+    FileCode
 } from 'lucide-react';
 import './Services.css';
 
 const Services = () => {
-    const services = [
+    const primaryServices = [
         {
-            id: 1,
-            title: "Secure MVP Development",
-            description: "Go from concept to compliant code in weeks. We build scalable frontends and secure backends designed for audit readiness.",
-            icon: Rocket,
+            id: 'primary-1',
+            title: "End-to-End Engineering & Compliance",
+            description: "The complete lifecycle. We build your product from zero to scalable, fully compliant launch. Architecture, development, and regulatory approval in one stream.",
+            icon: Layers,
             features: [
-                "Rapid prototyping",
-                "Audit-ready architecture",
-                "Frontend & Backend scaling"
+                "Full-cycle development",
+                "Full Privacy Compliance (GDPR/DPDPA/PDPL/CCPA)",
+                "Audit-ready delivery"
             ]
         },
         {
-            id: 2,
-            title: "Compliance-Ready Architecture",
-            description: "Refactoring and system design that integrates GDPR/CCPA requirements directly into your codebase. Stop bolting on privacy later.",
+            id: 'primary-2',
+            title: "End-to-End Software Engineering",
+            description: "Pure technical execution for complex systems. We build high-performance frontends, robust backends, and maintainable infrastructure without the bloat.",
+            icon: Code,
+            features: [
+                "Modern tech stack",
+                "Full-stack development",
+                "UI/UX design",
+                "Scalable architecture",
+                "Performance optimization",
+
+            ]
+        },
+        {
+            id: 'primary-3',
+            title: "End-to-End Privacy Compliance",
+            description: "Turn existing risks into assets. We retrofit your current codebase with privacy controls, data mapping, and security frameworks required for enterprise deals.",
             icon: ShieldCheck,
             features: [
-                "GDPR/CCPA compliance",
-                "Privacy by design",
-                "Security audits"
+                "Privacy Aduits and Gap Assessments",
+                "Regulatory Compliance Services",
+                "Policy & Documentation Developer",
+                "Data Protection Impact Assessments (DPIA)",
+                "Privacy retrofitting",
+                "Data flow mapping",
+                "Regulatory implementation"
             ]
-        },
+        }
+    ];
+
+    const targetedServices = [
         {
-            id: 3,
+            id: 'targeted-1',
             title: "Technical Due Diligence",
-            description: "Code quality assessments, security vulnerability scans, and privacy gap analysis for startups preparing for funding or acquisition.",
-            icon: Search,
-            features: [
-                "Code quality assessment",
-                "Vulnerability scanning",
-                "Privacy gap analysis"
-            ]
+            description: "Code quality and security assessments for startups preparing for funding or M&A.",
+            icon: Search
         },
         {
-            id: 4,
+            id: 'targeted-2',
             title: "Dedicated Engineering Teams",
-            description: "Senior-led squads with in-house legal oversight. We act as your fractional engineering arm, fully integrated with your workflow.",
-            icon: Users,
-            features: [
-                "Senior leadership",
-                "Legal oversight",
-                "Fractional engineering"
-            ]
+            description: "Fractional senior engineering squads integrated fully into your workflow.",
+            icon: Users
+        },
+        {
+            id: 'targeted-3',
+            title: "Smart Contract & Web3 Audits",
+            description: "Specialized validation for blockchain protocols and decentralized applications.",
+            icon: FileCode
         }
     ];
 
@@ -74,6 +94,7 @@ const Services = () => {
     return (
         <section id="services" className="section services-section">
             <div className="container">
+                {/* Primary Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -85,24 +106,27 @@ const Services = () => {
                         What We <span className="text-gradient">Do</span>
                     </h2>
                     <p className="section-subtitle">
-                        Engineering + Compliance. No Fluff.
+                        Comprehensive engineering and privacy solutions.
+                        <br />
+                        Choose the full package or targeting consulting.
                     </p>
                 </motion.div>
 
+                {/* Primary Services Grid */}
                 <motion.div
                     variants={container}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="services-grid"
+                    className="services-grid services-grid-primary"
                 >
-                    {services.map((service) => {
+                    {primaryServices.map((service) => {
                         const IconComponent = service.icon;
                         return (
                             <motion.div
                                 key={service.id}
                                 variants={item}
-                                whileHover={{ scale: 1.05, y: -5 }}
+                                whileHover={{ scale: 1.02, y: -5 }}
                                 className="service-card"
                             >
                                 <div className="service-card-content">
@@ -113,7 +137,6 @@ const Services = () => {
                                     </div>
 
                                     <h3 className="service-title">{service.title}</h3>
-
                                     <p className="service-description">{service.description}</p>
 
                                     <ul className="service-features">
@@ -129,6 +152,63 @@ const Services = () => {
                         );
                     })}
                 </motion.div>
+
+                {/* Targeted Services Subsection */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="subsection-header text-center"
+                >
+                    <div className="subsection-badge">
+                        Modularity
+                    </div>
+                    <h3 className="subsection-title">
+                        Engage Us at Any Stage
+                    </h3>
+                    <p className="subsection-description">
+                        Need specific expertise? We provide targeted interventions and individual services without the full retainer.
+                    </p>
+                </motion.div>
+
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, margin: "-50px" }}
+                    className="services-grid services-grid-secondary"
+                >
+                    {targetedServices.map((service) => {
+                        const IconComponent = service.icon;
+                        return (
+                            <motion.div
+                                key={service.id}
+                                variants={item}
+                                whileHover={{ scale: 1.02, y: -5 }}
+                                className="service-card service-card-sm"
+                            >
+                                <div className="service-card-content service-card-content-row">
+                                    <div className="service-card-glow"></div>
+                                    <div className="service-row-layout">
+                                        <div className="service-icon-wrapper-sm">
+                                            <IconComponent className="service-icon-lucide" size={20} />
+                                        </div>
+                                        <div>
+                                            <h4 className="service-title-sm">
+                                                {service.title}
+                                            </h4>
+                                            <p className="service-description-sm">
+                                                {service.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
+                </motion.div>
+
             </div>
         </section>
     );

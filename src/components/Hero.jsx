@@ -33,8 +33,8 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
                         <h1 className="hero-title">
-                            Privacy-First Software Engineering for{' '}
-                            <span className="text-gradient">Global SaaS Companies</span>
+                            Privacy-Ready Software Engineering for{' '}
+                            <span className="text-gradient">Global SaaS & Startup Companies</span>
                         </h1>
                     </motion.div>
 
@@ -44,7 +44,7 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="hero-subtitle"
                     >
-                        Engineering + GDPR + security by design. We build secure, compliant, and scalable software for Fintech, Healthtech, and AI startups.
+                        Engineering & Development + Global Privacy Compliance (GDPR, DPDPA, UAE PDPA, CCPA, HIPAA, etc.) + Security & Privacy by Design. We build secure, compliant and scalable software from day one for early-stage startups and bussiness in Fintech, Healthcare, E-Commerce, AI & IoT etc.
                     </motion.p>
 
                     <motion.div

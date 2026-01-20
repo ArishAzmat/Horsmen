@@ -1,33 +1,59 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Rocket, ShieldCheck, Database, Users } from 'lucide-react';
+import {
+    Rocket,
+    ShieldCheck,
+    Database,
+    Users,
+    Building2,
+    Briefcase,
+    User
+} from 'lucide-react';
 import './TargetAudience.css';
 
 const TargetAudience = () => {
-    const audience = [
+    const primaryAudience = [
         {
             title: "SaaS Startups",
-            description: "Launch MVPs that are enterprise-ready from Day 1. Scale without technical debt.",
+            description: "Launch MVPs that are enterprise-ready from day one. We help you scale rapidly while avoiding the technical debt that slows down growth.",
             icon: Rocket
         },
         {
             title: "Fintech & Healthtech",
-            description: "Navigate complex regulations (GDPR, HIPAA) with code that complies by default.",
+            description: "Navigate strict regulatory landscapes with privacy-first engineering. We implement high-level compliance directly into your codebase to protect sensitive data.",
             icon: ShieldCheck
         },
         {
             title: "AI Platforms",
-            description: "Robust architecture for data-intensive applications with strict privacy controls.",
+            description: "Robust architecture for data-intensive AI applications. We ensure your proprietary models and user data remain private, secure, and highly performant.",
             icon: Database
         },
         {
             title: "Founders & CTOs",
-            description: "Scale your team with senior engineers who understand business logic, not just syntax.",
+            description: "Partner with senior engineers who think like owners. We provide the technical leadership and execution needed to turn complex roadmaps into reality.",
             icon: Users
         }
     ];
 
-    const container = {
+    const extendedAudience = [
+        {
+            title: "Small & Medium Businesses",
+            description: "Modernize legacy systems without disrupting your daily operations. We transform fragile, manual tools into robust, automated business engines.",
+            icon: Building2
+        },
+        {
+            title: "Enterprises & Consulting Partners",
+            description: "Deep technical expertise for high-stakes projects and partnerships. We integrate with internal teams to deliver complex, mission-critical software solutions.",
+            icon: Briefcase
+        },
+        {
+            title: "Individuals & Independent Professionals",
+            description: "Turn unique ideas into professional-grade software reality. We provide same high-end engineering for solo builders that we do for major firms.",
+            icon: User
+        }
+    ];
+
+    const containerVariants = {
         hidden: { opacity: 0 },
         show: {
             opacity: 1,
@@ -37,9 +63,40 @@ const TargetAudience = () => {
         }
     };
 
-    const item = {
+    const itemVariants = {
         hidden: { opacity: 0, y: 20 },
         show: { opacity: 1, y: 0 }
+    };
+
+    const renderCard = (item, index) => {
+        const Icon = item.icon;
+
+        const handleMouseMove = (e) => {
+            const { currentTarget: target, clientX, clientY } = e;
+            const rect = target.getBoundingClientRect(),
+                x = clientX - rect.left,
+                y = clientY - rect.top;
+
+            target.style.setProperty("--mouse-x", `${x}px`);
+            target.style.setProperty("--mouse-y", `${y}px`);
+        };
+
+        return (
+            <motion.div
+                key={index}
+                variants={itemVariants}
+                className="audience-card"
+                onMouseMove={handleMouseMove}
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+            >
+                <div className="audience-card-glow"></div>
+                <div className="audience-icon-wrapper">
+                    <Icon size={24} strokeWidth={1.5} />
+                </div>
+                <h3 className="audience-title">{item.title}</h3>
+                <p className="audience-description">{item.description}</p>
+            </motion.div>
+        );
     };
 
     return (
@@ -55,30 +112,25 @@ const TargetAudience = () => {
                     <h2 className="section-title">
                         Who We <span className="text-gradient">Help</span>
                     </h2>
-                    <p className="section-subtitle">
-                        Built for Founders Who Can't Afford Technical Debt or Data Leaks
+                    <p className="section-subtitle max-w-2xl mx-auto">
+                        Built for teams and individuals who can’t afford fragile software, data risks, or costly rework.
+                        Whether you’re a startup founder, a growing business, or an individual building something meaningful, we meet you at your current stage and engineer for where you’re going next.
                     </p>
                 </motion.div>
 
                 <motion.div
-                    variants={container}
+                    variants={containerVariants}
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, margin: "-50px" }}
-                    className="audience-grid"
+                    className="audience-container"
                 >
-                    {audience.map((item, index) => {
-                        const Icon = item.icon;
-                        return (
-                            <motion.div key={index} variants={item} className="audience-card">
-                                <div className="audience-icon-wrapper">
-                                    <Icon size={32} />
-                                </div>
-                                <h3 className="audience-title">{item.title}</h3>
-                                <p className="audience-description">{item.description}</p>
-                            </motion.div>
-                        );
-                    })}
+                    <div className="audience-grid-primary">
+                        {primaryAudience.map((item, index) => renderCard(item, index))}
+                    </div>
+                    <div className="audience-grid-extended">
+                        {extendedAudience.map((item, index) => renderCard(item, index + 4))}
+                    </div>
                 </motion.div>
             </div>
         </section>
@@ -86,3 +138,4 @@ const TargetAudience = () => {
 };
 
 export default TargetAudience;
+

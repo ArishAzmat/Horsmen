@@ -16,7 +16,7 @@
 .section-subtitle {
     font-size: var(--font-size-xl);
     color: #94A3B8;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -165,4 +165,93 @@
     .services-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Secondary Section Styles */
+.services-grid-primary {
+    margin-bottom: var(--space-16);
+}
+
+.subsection-header {
+    margin-top: var(--space-12);
+    margin-bottom: var(--space-8);
+}
+
+.subsection-badge {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: var(--radius-full);
+    background: rgba(30, 41, 59, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-4);
+    color: var(--color-text-secondary);
+}
+
+.subsection-title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-3);
+}
+
+.subsection-description {
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: var(--font-size-base);
+}
+
+.services-grid-secondary {
+    margin-top: var(--space-8);
+}
+
+.service-card-sm {
+    min-height: auto;
+}
+
+.service-card-content-row {
+    padding: var(--space-5);
+    display: flex;
+    align-items: center;
+}
+
+.service-row-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    width: 100%;
+}
+
+.service-icon-wrapper-sm {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.service-title-sm {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-1);
+    transition: color var(--transition-base);
+}
+
+.service-card-sm:hover .service-title-sm {
+    color: var(--color-secondary);
+}
+
+.service-description-sm {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
 }
