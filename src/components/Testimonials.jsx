@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Users, Lock, Code } from 'lucide-react';
 import './Testimonials.css';
 

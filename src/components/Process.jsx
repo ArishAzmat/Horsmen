@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Search, FileText, Terminal, CheckCircle } from 'lucide-react';
 import './Process.css';
 
@@ -58,16 +57,11 @@ const Process = () => {
                     </p>
                 </div>
 
-                <motion.div
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                    className="process-steps"
-                >
+                <div className="process-steps">
                     {steps.map((step, index) => {
                         const Icon = step.icon;
                         return (
-                            <motion.div key={index} variants={item} className="process-step">
+                            <div key={index} className="process-step">
                                 <div className="step-number">
                                     <Icon size={32} />
                                 </div>
@@ -75,10 +69,10 @@ const Process = () => {
                                     <h3>{step.title}</h3>
                                     <p>{step.description}</p>
                                 </div>
-                            </motion.div>
+                            </div>
                         );
                     })}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

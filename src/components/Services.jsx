@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import {
     Rocket,
     ShieldCheck,
@@ -107,19 +106,12 @@ const Services = () => {
                 </div>
 
                 {/* Primary Services Grid */}
-                <motion.div
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                    className="services-grid services-grid-primary"
-                >
+                <div className="services-grid services-grid-primary">
                     {primaryServices.map((service) => {
                         const IconComponent = service.icon;
                         return (
-                            <motion.div
+                            <div
                                 key={service.id}
-                                variants={item}
-                                whileHover={{ scale: 1.02, y: -5 }}
                                 className="service-card"
                             >
                                 <div className="service-card-content">
@@ -141,10 +133,10 @@ const Services = () => {
                                         ))}
                                     </ul>
                                 </div>
-                            </motion.div>
+                            </div>
                         );
                     })}
-                </motion.div>
+                </div>
 
                 {/* Targeted Services Subsection */}
                 <div className="subsection-header text-center">
@@ -159,19 +151,12 @@ const Services = () => {
                     </p>
                 </div>
 
-                <motion.div
-                    variants={container}
-                    initial="hidden"
-                    animate="show"
-                    className="services-grid services-grid-secondary"
-                >
+                <div className="services-grid services-grid-secondary">
                     {targetedServices.map((service) => {
                         const IconComponent = service.icon;
                         return (
-                            <motion.div
+                            <div
                                 key={service.id}
-                                variants={item}
-                                whileHover={{ scale: 1.02, y: -5 }}
                                 className="service-card service-card-sm"
                             >
                                 <div className="service-card-content service-card-content-row">
@@ -190,10 +175,10 @@ const Services = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         );
                     })}
-                </motion.div>
+                </div>
 
             </div>
         </section>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import horsmenLogo from '../assets/images/logo.png';
@@ -26,9 +25,7 @@ const Header = () => {
     };
 
     return (
-        <motion.header
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
+        <header
             className={`header ${isScrolled ? 'header-scrolled' : ''}`}
         >
             <div className="container">
@@ -59,7 +56,7 @@ const Header = () => {
                     </ul>
                 </nav>
             </div>
-        </motion.header>
+        </header>
     );
 };
 

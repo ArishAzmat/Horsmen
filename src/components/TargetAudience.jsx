@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import {
     Rocket,
     ShieldCheck,
@@ -82,12 +81,10 @@ const TargetAudience = () => {
         };
 
         return (
-            <motion.div
+            <div
                 key={index}
-                variants={itemVariants}
                 className="audience-card"
                 onMouseMove={handleMouseMove}
-                whileHover={{ y: -8, transition: { duration: 0.2 } }}
             >
                 <div className="audience-card-glow"></div>
                 <div className="audience-icon-wrapper">
@@ -95,7 +92,7 @@ const TargetAudience = () => {
                 </div>
                 <h3 className="audience-title">{item.title}</h3>
                 <p className="audience-description">{item.description}</p>
-            </motion.div>
+            </div>
         );
     };
 
@@ -112,19 +109,14 @@ const TargetAudience = () => {
                     </p>
                 </div>
 
-                <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate="show"
-                    className="audience-container"
-                >
+                <div className="audience-container">
                     <div className="audience-grid-primary">
                         {primaryAudience.map((item, index) => renderCard(item, index))}
                     </div>
                     <div className="audience-grid-extended">
                         {extendedAudience.map((item, index) => renderCard(item, index + 4))}
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

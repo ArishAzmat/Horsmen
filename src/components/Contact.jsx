@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
 import mockApi from '../api/mockApi';
 import './Contact.css';
@@ -54,38 +53,29 @@ const Contact = () => {
 
                 <div className="contact-content">
                     <div className="contact-info">
-                        <motion.div
-                            whileHover={{ scale: 1.05, y: -5 }}
-                            className="info-card card-glass"
-                        >
+                        <div className="info-card card-glass">
                             <div className="info-icon-wrapper">
                                 <Mail className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Email Us</h3>
                             <p>contact@horsmen.com</p>
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                            whileHover={{ scale: 1.05, y: -5 }}
-                            className="info-card card-glass"
-                        >
+                        <div className="info-card card-glass">
                             <div className="info-icon-wrapper">
                                 <Phone className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Call Us</h3>
                             <p>+1 (555) 123-4567</p>
-                        </motion.div>
+                        </div>
 
-                        <motion.div
-                            whileHover={{ scale: 1.05, y: -5 }}
-                            className="info-card card-glass"
-                        >
+                        <div className="info-card card-glass">
                             <div className="info-icon-wrapper">
                                 <MapPin className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Visit Us</h3>
                             <p>123 Business Avenue<br />Tech District, CA 94000</p>
-                        </motion.div>
+                        </div>
 
                         <div className="social-links">
                             <h3>Follow Us</h3>
@@ -171,7 +161,7 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
