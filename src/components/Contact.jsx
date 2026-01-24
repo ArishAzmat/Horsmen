@@ -43,28 +43,18 @@ const Contact = () => {
     return (
         <section id="contact" className="section section-dark">
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="section-header text-center"
-                >
+                <div className="section-header text-center">
                     <h2 className="section-title">
                         Stop Worrying About <span className="text-gradient">Technical Debt</span>
                     </h2>
                     <p className="section-subtitle">
                         Let's build software that scales securely.
                     </p>
-                </motion.div>
+                </div>
 
                 <div className="contact-content">
                     <div className="contact-info">
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
                             whileHover={{ scale: 1.05, y: -5 }}
                             className="info-card card-glass"
                         >
@@ -76,10 +66,6 @@ const Contact = () => {
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
                             whileHover={{ scale: 1.05, y: -5 }}
                             className="info-card card-glass"
                         >
@@ -91,10 +77,6 @@ const Contact = () => {
                         </motion.div>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
                             whileHover={{ scale: 1.05, y: -5 }}
                             className="info-card card-glass"
                         >
@@ -105,13 +87,7 @@ const Contact = () => {
                             <p>123 Business Avenue<br />Tech District, CA 94000</p>
                         </motion.div>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            className="social-links"
-                        >
+                        <div className="social-links">
                             <h3>Follow Us</h3>
                             <div className="social-icons">
                                 <a href="https://www.linkedin.com/company/horsmenconsulting/" target="_blank" className="social-icon" aria-label="LinkedIn">
@@ -124,7 +100,7 @@ const Contact = () => {
                                     <Facebook size={20} />
                                 </a>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
 
                     <form className="contact-form card" onSubmit={handleSubmit}>

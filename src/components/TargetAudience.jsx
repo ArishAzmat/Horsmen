@@ -102,13 +102,7 @@ const TargetAudience = () => {
     return (
         <section id="who-we-help" className="section target-audience-section">
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="section-header text-center"
-                >
+                <div className="section-header text-center">
                     <h2 className="section-title">
                         Who We <span className="text-gradient">Help</span>
                     </h2>
@@ -116,13 +110,12 @@ const TargetAudience = () => {
                         Built for teams and individuals who can’t afford fragile software, data risks, or costly rework.
                         Whether you’re a startup founder, a growing business, or an individual building something meaningful, we meet you at your current stage and engineer for where you’re going next.
                     </p>
-                </motion.div>
+                </div>
 
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: "-50px" }}
+                    animate="show"
                     className="audience-container"
                 >
                     <div className="audience-grid-primary">

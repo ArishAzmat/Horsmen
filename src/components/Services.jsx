@@ -95,13 +95,7 @@ const Services = () => {
         <section id="services" className="section services-section">
             <div className="container">
                 {/* Primary Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="section-header text-center"
-                >
+                <div className="section-header text-center">
                     <h2 className="section-title">
                         What We <span className="text-gradient">Do</span>
                     </h2>
@@ -110,14 +104,13 @@ const Services = () => {
                         <br />
                         Choose the full package or targeting consulting.
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Primary Services Grid */}
                 <motion.div
                     variants={container}
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: "-100px" }}
+                    animate="show"
                     className="services-grid services-grid-primary"
                 >
                     {primaryServices.map((service) => {
@@ -154,13 +147,7 @@ const Services = () => {
                 </motion.div>
 
                 {/* Targeted Services Subsection */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="subsection-header text-center"
-                >
+                <div className="subsection-header text-center">
                     <div className="subsection-badge">
                         Modularity
                     </div>
@@ -170,13 +157,12 @@ const Services = () => {
                     <p className="subsection-description">
                         Need specific expertise? We provide targeted interventions and individual services without the full retainer.
                     </p>
-                </motion.div>
+                </div>
 
                 <motion.div
                     variants={container}
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: "-50px" }}
+                    animate="show"
                     className="services-grid services-grid-secondary"
                 >
                     {targetedServices.map((service) => {

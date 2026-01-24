@@ -27,7 +27,7 @@ const Hero = () => {
 
             <div className="container">
                 <div className="hero-content">
-                    <div
+                    <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
@@ -36,18 +36,18 @@ const Hero = () => {
                             Privacy-Ready Software Engineering for{' '}
                             <span className="text-gradient">Global SaaS & Startup Companies</span>
                         </h1>
-                    </div>
+                    </motion.div>
 
-                    <p
+                    <motion.p
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="hero-subtitle"
                     >
                         Engineering & Development + Global Privacy Compliance (GDPR, DPDPA, UAE PDPA, CCPA, HIPAA, etc.) + Security & Privacy by Design. We build secure, compliant and scalable software from day one for early-stage startups and bussiness in Fintech, Healthcare, E-Commerce, AI & IoT etc.
-                    </p>
+                    </motion.p>
 
-                    <div
+                    <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
@@ -66,7 +66,7 @@ const Hero = () => {
                         >
                             Our Services
                         </button>
-                    </div>
+                    </motion.div>
 
                     {/* <div
                         initial={{ opacity: 0, y: 20 }}
@@ -95,20 +95,20 @@ const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div
+            <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}
                 className="scroll-indicator"
             >
-                <div
+                <motion.div
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                     className="scroll-indicator-mouse"
                 >
                     <div className="scroll-indicator-dot"></div>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     );
 };

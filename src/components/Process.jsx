@@ -49,26 +49,19 @@ const Process = () => {
     return (
         <section id="process" className="section process-section">
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="section-header text-center"
-                >
+                <div className="section-header text-center">
                     <h2 className="section-title">
                         How We <span className="text-gradient">Work</span>
                     </h2>
                     <p className="section-subtitle">
                         A Transparent, 4-Step Path to Delivery
                     </p>
-                </motion.div>
+                </div>
 
                 <motion.div
                     variants={container}
                     initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, margin: "-50px" }}
+                    animate="show"
                     className="process-steps"
                 >
                     {steps.map((step, index) => {

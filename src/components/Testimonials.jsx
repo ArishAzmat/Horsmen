@@ -36,13 +36,9 @@ const Testimonials = () => {
                     {trustSignals.map((item, index) => {
                         const Icon = item.icon;
                         return (
-                            <motion.div
+                            <div
                                 key={index}
                                 className="testimonial-card card"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1, duration: 0.6 }}
                             >
                                 <div className="trust-icon-wrapper" style={{ marginBottom: '1.5rem', color: 'var(--primary)' }}>
                                     <Icon size={40} />
@@ -50,7 +46,7 @@ const Testimonials = () => {
 
                                 <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>{item.title}</h3>
                                 <p className="testimonial-content" style={{ fontStyle: 'normal' }}>{item.description}</p>
-                            </motion.div>
+                            </div>
                         );
                     })}
                 </div>
