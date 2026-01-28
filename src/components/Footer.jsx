@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import horsmenLogo from '../assets/images/logo.png';
@@ -26,7 +26,10 @@ const Footer = () => {
                             </div>
                         </Link>
                         <p className="footer-description">
-                            Bridging Technology and Legal Excellence. Empowering businesses to thrive in the digital age.
+                            The Value of Vanguard.
+                        </p>
+                        <p className="footer-description">
+                            Building secure, scalable systems for a privacy-first world.
                         </p>
                     </div>
 
@@ -43,19 +46,28 @@ const Footer = () => {
                     <div className="footer-section">
                         <h4>Services</h4>
                         <ul className="footer-links">
-                            <li><a href="#">Software Development</a></li>
-                            <li><a href="#">Data Privacy & Security</a></li>
-                            <li><a href="#">IT Consulting</a></li>
-                            <li><a href="#">Legal Compliance</a></li>
+                            <li><a onClick={() => scrollToSection('services')}>End-to-End Engineering & Compliance</a></li>
+                            <li><a onClick={() => scrollToSection('services')}>End-to-End Software Engineering</a></li>
+                            <li><a onClick={() => scrollToSection('services')}>End-to-End Privacy Compliance</a></li>
+                            {/* <li><a href="#">Legal Compliance</a></li> */}
                         </ul>
                     </div>
 
                     <div className="footer-section">
                         <h4>Contact Info</h4>
                         <ul className="footer-contact">
-                            <li>📧 contact@horsmen.com</li>
-                            <li>📞 +1 (555) 123-4567</li>
-                            <li>📍 123 Business Avenue<br />Tech District, CA 94000</li>
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <Mail size={18} style={{ flexShrink: 0 }} />
+                                horsmenconsulting@gmail.com
+                            </li>
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <Phone size={18} style={{ flexShrink: 0 }} />
+                                +91 9720660741
+                            </li>
+                            {/* <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                                <MapPin size={18} style={{ flexShrink: 0, marginTop: '0.2rem' }} />
+                                <span>123 Business Avenue<br />Tech District, CA 94000</span>
+                            </li> */}
                         </ul>
                         <div className="footer-social" style={{ marginTop: '1rem' }}>
                             <a

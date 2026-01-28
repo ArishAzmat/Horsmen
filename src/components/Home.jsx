@@ -5,6 +5,7 @@ import Services from './Services';
 import Process from './Process';
 import About from './About';
 import Testimonials from './Testimonials';
+import Team from './Team';
 import Contact from './Contact';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
             <Process />
             <About />
             <Testimonials />
+            <Team />
             <Contact />
         </>
     );

@@ -34,7 +34,7 @@ const Hero = () => {
                     </div>
 
                     <p className="hero-subtitle">
-                        Engineering & Development + Global Privacy Compliance (GDPR, DPDPA, UAE PDPA, CCPA, HIPAA, etc.) + Security & Privacy by Design. We build secure, compliant and scalable software from day one for early-stage startups and bussiness in Fintech, Healthcare, E-Commerce, AI & IoT etc.
+                        Engineering & Development + Global Privacy Compliance (GDPR, DPDPA, UAE & KSA PDPL, CCPA, etc.) + Security & Privacy by Design. We build secure, compliant and scalable software from day one for early-stage startups and businesses in Fintech, Healthcare, E-Commerce, AI & IoT etc.
                     </p>
 
                     <div className="hero-cta">

@@ -19,9 +19,9 @@ function App() {
 
         return () => clearTimeout(timer);
     }, []);
-    window.onerror = function (msg, url, line, col, error) {
-        alert("JS Error: " + msg);
-    };
+    // window.onerror = function (msg, url, line, col, error) {
+    //     alert("JS Error: " + msg);
+    // };
     return (
         <Router>
             <AnimatePresence mode="wait">

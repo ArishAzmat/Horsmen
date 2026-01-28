@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
 import mockApi from '../api/mockApi';
 import './Contact.css';
 
@@ -58,7 +58,7 @@ const Contact = () => {
                                 <Mail className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Email Us</h3>
-                            <p>contact@horsmen.com</p>
+                            <p>horsmenconsulting@gmail.com</p>
                         </div>
 
                         <div className="info-card card-glass">
@@ -66,16 +66,16 @@ const Contact = () => {
                                 <Phone className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Call Us</h3>
-                            <p>+1 (555) 123-4567</p>
+                            <p>+91 9720660741</p>
                         </div>
 
-                        <div className="info-card card-glass">
+                        {/* <div className="info-card card-glass">
                             <div className="info-icon-wrapper">
                                 <MapPin className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Visit Us</h3>
                             <p>123 Business Avenue<br />Tech District, CA 94000</p>
-                        </div>
+                        </div> */}
 
                         <div className="social-links">
                             <h3>Follow Us</h3>
@@ -83,12 +83,12 @@ const Contact = () => {
                                 <a href="https://www.linkedin.com/company/horsmenconsulting/" target="_blank" className="social-icon" aria-label="LinkedIn">
                                     <Linkedin size={20} />
                                 </a>
-                                <a href="#" className="social-icon" aria-label="Twitter">
-                                    <Twitter size={20} />
+                                <a href="https://www.instagram.com/horsmenconsulting/" target="_blank" className="social-icon" aria-label="Instagram">
+                                    <Instagram size={20} />
                                 </a>
-                                <a href="#" className="social-icon" aria-label="Facebook">
+                                {/* <a href="#" className="social-icon" aria-label="Facebook">
                                     <Facebook size={20} />
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                placeholder="John Doe"
+                                placeholder="Haider Khan"
                             />
                         </div>
 
@@ -116,7 +116,7 @@ const Contact = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                placeholder="john@company.com"
+                                placeholder="Haider@youremail.com"
                             />
                         </div>
 

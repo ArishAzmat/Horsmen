@@ -18,9 +18,14 @@ const Services = () => {
             description: "The complete lifecycle. We build your product from zero to scalable, fully compliant launch. Architecture, development, and regulatory approval in one stream.",
             icon: Layers,
             features: [
-                "Full-cycle development",
-                "Full Privacy Compliance (GDPR/DPDPA/PDPL/CCPA)",
-                "Audit-ready delivery"
+                "Full-cycle product architecture & development",
+                "Privacy-by-design implementation from inception",
+                "Full regulatory compliance (GDPR / DPDPA / PDPL / CCPA and applicable frameworks)",
+                "Secure system architecture & data governance design",
+                "Compliance-ready infrastructure & deployment",
+                "Data protection controls & documentation alignment",
+                "Pre-launch compliance review & risk mitigation",
+                "Ongoing engineering & compliance support"
             ]
         },
         {
@@ -29,11 +34,14 @@ const Services = () => {
             description: "Pure technical execution for complex systems. We build high-performance frontends, robust backends, and maintainable infrastructure without the bloat.",
             icon: Code,
             features: [
-                "Modern tech stack",
-                "Full-stack development",
-                "UI/UX design",
-                "Scalable architecture",
-                "Performance optimization",
+                "MVP to production-ready builds",
+                "Full-stack application development (frontend & backend)",
+                "Scalable system architecture & API design",
+                "Cloud-native infrastructure & DevOps",
+                "AI integrations (LLMs, automation, intelligent workflows)",
+                "UI/UX",
+                "Scalable architecture & system hardening",
+                "Continuous support & iteration"
 
             ]
         },
@@ -43,13 +51,14 @@ const Services = () => {
             description: "Turn existing risks into assets. We retrofit your current codebase with privacy controls, data mapping, and security frameworks required for enterprise deals.",
             icon: ShieldCheck,
             features: [
-                "Privacy Aduits and Gap Assessments",
-                "Regulatory Compliance Services",
-                "Policy & Documentation Developer",
+                "Privacy Audits & Gap Assessments",
+                "Regulatory Compliance Services (GDPR, CCPA, HIPAA and applicable frameworks)",
+                "Policy & Documentation Development",
                 "Data Protection Impact Assessments (DPIA)",
-                "Privacy retrofitting",
-                "Data flow mapping",
-                "Regulatory implementation"
+                "Privacy Retrofitting for Existing Codebases",
+                "Data Flow Mapping & Processing Inventories",
+                "Regulatory Implementation & Remediation",
+                "Regulatory Implementation & Remediation"
             ]
         }
     ];

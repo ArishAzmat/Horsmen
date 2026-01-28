@@ -7,25 +7,25 @@ const Process = () => {
         {
             number: "01",
             title: "Discovery & Risk Assessment",
-            description: "We understand your product goals and identify privacy/compliance needs upfront.",
+            description: "We understand & align on your product vision, technical requirements, and regulatory exposure. Early risk identification prevents costly rebuilds later.",
             icon: Search
         },
         {
             number: "02",
             title: "Architectural Blueprint",
-            description: "We design a secure system roadmap, ensuring scalability and regulatory adherence.",
+            description: "We design a secure, scalable system architecture with privacy-by-design principles embedded from the outset.",
             icon: FileText
         },
         {
             number: "03",
             title: "Agile Execution",
-            description: "Sprint-based development with weekly demos. You see progress, not just promises.",
+            description: "Sprint-based development with regular demos and transparent reporting. You see measurable progress, not assumptions.",
             icon: Terminal
         },
         {
             number: "04",
             title: "Secure Handover",
-            description: "Full code ownership transfer, documentation, and a final compliance check.",
+            description: "Production deployment, documentation, knowledge transfer, and final compliance validation. You retain full ownership of code and infrastructure.",
             icon: CheckCircle
         }
     ];
@@ -53,7 +53,7 @@ const Process = () => {
                         How We <span className="text-gradient">Work</span>
                     </h2>
                     <p className="section-subtitle">
-                        A Transparent, 4-Step Path to Delivery
+                        A Transparent, Structured Path to Secure Delivery
                     </p>
                 </div>
 
