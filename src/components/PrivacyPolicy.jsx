@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
                 <header className="privacy-header">
                     <h1>PRIVACY NOTICE</h1>
                     <div className="policy-meta">
-                        <p><strong>Last Updated:</strong> XX-XX-202X</p>
+                        <p><strong>Last Updated:</strong> 01-01-2026</p>
                         <p><strong>Version:</strong> 1.0</p>
                     </div>
                 </header>
@@ -159,7 +159,7 @@ const PrivacyPolicy = () => {
                     <p>If you have any questions about this Privacy Notice or your personal data, you can reach our Data Protection Officer/Grievance Officer:</p>
                     <address>
                         <strong>Horsmen Consulting</strong><br />
-                        <strong>Email:</strong> <a href="mailto:connect@horsmen.com">connect@horsmen.com</a>
+                        <strong>Email:</strong> <a href="mailto:horsmenconsulting@gmail.com">horsmenconsulting@gmail.com</a>
                     </address>
                 </section>
 

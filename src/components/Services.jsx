@@ -58,7 +58,6 @@ const Services = () => {
                 "Privacy Retrofitting for Existing Codebases",
                 "Data Flow Mapping & Processing Inventories",
                 "Regulatory Implementation & Remediation",
-                "Regulatory Implementation & Remediation"
             ]
         }
     ];

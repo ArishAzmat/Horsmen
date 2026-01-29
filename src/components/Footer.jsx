@@ -62,7 +62,7 @@ const Footer = () => {
                             </li>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <Phone size={18} style={{ flexShrink: 0 }} />
-                                +91 9720660741
+                                +91 9217670376
                             </li>
                             {/* <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
                                 <MapPin size={18} style={{ flexShrink: 0, marginTop: '0.2rem' }} />

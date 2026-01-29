@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
 import mockApi from '../api/mockApi';
 import './Contact.css';
@@ -26,13 +27,34 @@ const Contact = () => {
         setStatus({ type: '', message: '' });
 
         try {
-            const response = await mockApi.submitContactForm(formData);
-            setStatus({ type: 'success', message: response.data.message });
-            setFormData({ name: '', email: '', company: '', message: '' });
+            const apiUrl = import.meta.env.VITE_CONTACT_API_URL;
+
+            if (!apiUrl) {
+                // Fallback to mock for development if URL not set
+                const response = await mockApi.submitContactForm(formData);
+                setStatus({ type: 'success', message: response.data.message });
+            } else {
+                const response = await axios.post(apiUrl, formData, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.status === 200 || response.status === 201) {
+                    setStatus({
+                        type: 'success',
+                        message: 'Thank you! Your message has been sent successfully. We will get back to you soon.'
+                    });
+                    setFormData({ name: '', email: '', company: '', message: '' });
+                } else {
+                    throw new Error('Something went wrong. Please try again.');
+                }
+            }
         } catch (error) {
+            console.error('API Error:', error);
             setStatus({
                 type: 'error',
-                message: error.message || 'Failed to submit form. Please try again.'
+                message: error.response?.data?.message || error.message || 'Failed to submit form. Please try again.'
             });
         } finally {
             setIsSubmitting(false);
@@ -66,7 +88,7 @@ const Contact = () => {
                                 <Phone className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Call Us</h3>
-                            <p>+91 9720660741</p>
+                            <p>+91 9217670376</p>
                         </div>
 
                         {/* <div className="info-card card-glass">

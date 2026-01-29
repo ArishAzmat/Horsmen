@@ -10,7 +10,7 @@ const Team = () => {
             description: "Full-stack engineer with expertise in scalable systems and privacy-first architectures.",
             icon: Code,
             linkedin: "https://www.linkedin.com/in/arish-azmat/",
-            // email: "arish@horsmenconsulting.com"
+            email: "horsmenconsulting@gmail.com"
         },
         {
             name: "Akmal Affan",
@@ -18,7 +18,7 @@ const Team = () => {
             description: "IT law professional ensuring compliance and security in every solution we build.",
             icon: Shield,
             linkedin: "https://www.linkedin.com/in/mohdakmalaffan/",
-            // email: "akmal@horsmenconsulting.com"
+            email: "horsmenconsulting@gmail.com"
         },
         // {
         //     name: "AI Assistant",
@@ -69,6 +69,7 @@ const Team = () => {
                                                     aria-label="LinkedIn"
                                                 >
                                                     <Linkedin size={18} />
+                                                    <span className="team-social-text">LinkedIn</span>
                                                 </a>
                                             )}
                                             {member.email && (
@@ -78,6 +79,7 @@ const Team = () => {
                                                     aria-label="Email"
                                                 >
                                                     <Mail size={18} />
+                                                    <span className="team-social-text">Email</span>
                                                 </a>
                                             )}
                                         </div>
