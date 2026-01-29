@@ -151,9 +151,12 @@ body {
   color: #E2E8F0;
   background: #0f172a;
   background-image: var(--gradient-glow), linear-gradient(to bottom, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-  background-attachment: fixed;
+  background-attachment: scroll;
+  /* Changed from fixed to scroll for iOS compatibility */
   overflow-x: hidden;
   min-height: 100svh;
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling for older iOS */
 }
 
 /* TYPOGRAPHY */
@@ -227,6 +230,13 @@ a:hover {
 
 .section {
   padding: var(--space-12) 0;
+  position: relative;
+  /* iOS rendering fixes: prevent content vanishing on fast scroll */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .section-dark {
