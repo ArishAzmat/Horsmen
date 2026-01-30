@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
 import mockApi from '../api/mockApi';
+import whatsappIcon from '../assets/images/whatsapp-icon.svg';
 import './Contact.css';
 
 const Contact = () => {
@@ -80,7 +81,9 @@ const Contact = () => {
                                 <Mail className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Email Us</h3>
-                            <p>horsmenconsulting@gmail.com</p>
+                            <a href="mailto:horsmenconsulting@gmail.com" className="info-link">
+                                <p>horsmenconsulting@gmail.com</p>
+                            </a>
                         </div>
 
                         <div className="info-card card-glass">
@@ -88,16 +91,20 @@ const Contact = () => {
                                 <Phone className="info-icon-lucide" size={28} />
                             </div>
                             <h3>Call Us</h3>
-                            <p>+91 9217670376</p>
+                            <a href="tel:+919217670376" className="info-link">
+                                <p>+91 9217670376</p>
+                            </a>
                         </div>
 
-                        {/* <div className="info-card card-glass">
+                        <div className="info-card card-glass">
                             <div className="info-icon-wrapper">
-                                <MapPin className="info-icon-lucide" size={28} />
+                                <img src={whatsappIcon} alt="WhatsApp" className="info-icon-lucide" style={{ width: 28, height: 28 }} />
                             </div>
-                            <h3>Visit Us</h3>
-                            <p>123 Business Avenue<br />Tech District, CA 94000</p>
-                        </div> */}
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/919217670376" target="_blank" rel="noopener noreferrer" className="info-link">
+                                <p>+91 9217670376</p>
+                            </a>
+                        </div>
 
                         <div className="social-links">
                             <h3>Follow Us</h3>

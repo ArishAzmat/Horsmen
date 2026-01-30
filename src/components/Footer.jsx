@@ -3,6 +3,7 @@ import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import horsmenLogo from '../assets/images/logo.png';
+import whatsappIcon from '../assets/images/whatsapp-icon.svg';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -58,16 +59,22 @@ const Footer = () => {
                         <ul className="footer-contact">
                             <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <Mail size={18} style={{ flexShrink: 0 }} />
-                                horsmenconsulting@gmail.com
+                                <a href="mailto:horsmenconsulting@gmail.com" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-accent)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
+                                    horsmenconsulting@gmail.com
+                                </a>
                             </li>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <Phone size={18} style={{ flexShrink: 0 }} />
-                                +91 9217670376
+                                <a href="tel:+919217670376" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-accent)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
+                                    +91 9217670376
+                                </a>
                             </li>
-                            {/* <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
-                                <MapPin size={18} style={{ flexShrink: 0, marginTop: '0.2rem' }} />
-                                <span>123 Business Avenue<br />Tech District, CA 94000</span>
-                            </li> */}
+                            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                <img src={whatsappIcon} alt="WhatsApp" style={{ width: 18, height: 18, flexShrink: 0 }} />
+                                <a href="https://wa.me/919217670376" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = 'var(--color-accent)'} onMouseOut={(e) => e.target.style.color = 'inherit'}>
+                                    +91 9217670376
+                                </a>
+                            </li>
                         </ul>
                         <div className="footer-social" style={{ marginTop: '1rem' }}>
                             <a

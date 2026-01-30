@@ -76,6 +76,16 @@
     z-index: 1;
 }
 
+.info-link {
+    text-decoration: none;
+    transition: all var(--transition-base);
+    display: inline-block;
+}
+
+.info-link:hover p {
+    color: #2A9D8F;
+}
+
 .social-links {
     padding: var(--space-5);
     text-align: center;
