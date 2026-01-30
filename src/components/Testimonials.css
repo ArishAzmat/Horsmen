@@ -13,7 +13,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(28, 61, 90, 0.9);
+    background: rgba(15, 23, 42, 0.92);
     z-index: 0;
 }
 
@@ -35,15 +35,13 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
-    animation: fadeInUp var(--transition-slow) ease-out both;
     position: relative;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(30, 41, 59, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: var(--space-6);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all var(--transition-base);
 }
 

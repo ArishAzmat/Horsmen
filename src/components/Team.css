@@ -32,8 +32,7 @@
 
 /* Team Card */
 .team-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
+    background: rgba(30, 41, 59, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 2rem;
@@ -64,8 +63,7 @@
 .team-card:hover {
     transform: translateY(-8px);
     border-color: rgba(147, 51, 234, 0.3);
-    box-shadow: 0 20px 40px rgba(147, 51, 234, 0.15),
-        0 0 30px rgba(147, 51, 234, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .team-card:hover::before {
@@ -121,7 +119,6 @@
 
 .team-card:hover .team-icon {
     color: var(--secondary);
-    filter: drop-shadow(0 0 10px rgba(147, 51, 234, 0.5));
 }
 
 /* Team Card Body */

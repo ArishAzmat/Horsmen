@@ -231,12 +231,6 @@ a:hover {
 .section {
   padding: var(--space-12) 0;
   position: relative;
-  /* iOS rendering fixes: prevent content vanishing on fast scroll */
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  will-change: transform;
 }
 
 .section-dark {
@@ -269,9 +263,8 @@ a:hover {
 }
 
 .glassmorphism {
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.9);
+  /* More opaque background as fallback for no blur */
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 

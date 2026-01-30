@@ -8,4 +8,13 @@ export default defineConfig({
   build: {
     assetsDir: "assets",    // FORCE assets directory
   },
+  server: {
+    host: true,
+    allowedHosts: [
+      'localhost',
+      'alive-duck-wildly.ngrok-free.app',
+      'horsmen.com',
+      'www.horsmen.com'
+    ]
+  }
 })

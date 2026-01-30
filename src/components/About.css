@@ -24,8 +24,7 @@
 }
 
 .mission-box {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: rgba(30, 41, 59, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius-xl);
     padding: var(--space-6);
@@ -52,7 +51,6 @@
 
 .value-card {
     padding: var(--space-5);
-    animation: fadeInUp var(--transition-slow) ease-out both;
 }
 
 .value-card h4 {
