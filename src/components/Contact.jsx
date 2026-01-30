@@ -27,8 +27,8 @@ const Contact = () => {
         setStatus({ type: '', message: '' });
 
         try {
-            const apiUrl = import.meta.env.VITE_CONTACT_API_URL;
-
+            const apiUrl = 'https://dfcme5alnc.execute-api.ap-south-1.amazonaws.com/contact-form';
+            console.log("API URL:", apiUrl);
             if (!apiUrl) {
                 // Fallback to mock for development if URL not set
                 const response = await mockApi.submitContactForm(formData);
